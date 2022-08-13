@@ -19,7 +19,7 @@
                 let msg = Play(playerSelection, computerSelection);
                 console.log(msg);
                 if (playerSelection !== "rock" && "paper" && "scissors") {
-                    break;
+                    i--;
                 } else {
                     console.log('Current score: Human: ', humanScore, ' Computer: ', computerScore)
                     setTimeout(Game, 0);
