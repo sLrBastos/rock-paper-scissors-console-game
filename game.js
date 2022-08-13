@@ -2,9 +2,9 @@ let humanScore = 0;
 let computerScore = 0;
 let i=0;
 
+
 function Game() {
-            
-    while (i<5) {
+    for (let i=0; i<5; i++) {
         let playerSelection = prompt(' Enter Rock, Paper, or Scissors');
         let computerSelection = computerPlay();
         let msg = Play(playerSelection, computerSelection);
@@ -13,9 +13,8 @@ function Game() {
             i--;
         } else {
             console.log('Current score: Human: ', humanScore, ' Computer: ', computerScore)
-            i++;
         }
-        }
+    }
     console.log(winner());
 }   
 
@@ -55,7 +54,7 @@ function Play(playerSelection, computerSelection) {
     } else if (playerSelection === 'SCISSORS' && computerSelection === 'ROCK') {
         computerScore += 1;
         return playerSelection + ' loses vs ' + computerSelection + '. Try again!';
-    } else return 'Enter a valid move! Refresh the page!';
+    } else return 'Enter a valid move!';
 }
 
 function winner() {
@@ -70,4 +69,7 @@ function winner() {
 }
 
 Game();
+
+
+
         
