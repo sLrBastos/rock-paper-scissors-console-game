@@ -9,7 +9,7 @@ function Game() {
         let computerSelection = computerPlay();
         let msg = Play(playerSelection, computerSelection);
         console.log(msg);
-        if (playerSelection !== "rock" && "paper" && "scissors") {
+        if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
             i--;
         } else {
             console.log('Current score: Human: ', humanScore, ' Computer: ', computerScore)
@@ -59,12 +59,12 @@ function Play(playerSelection, computerSelection) {
 
 function winner() {
     if (humanScore > computerScore) {
-        return 'Player Wins! ' + humanScore + " " + "to" + " " + computerScore ;
+        return 'End of game! Player Wins! ' + humanScore + " " + "to" + " " + computerScore ;
     } else if (computerScore > humanScore) {
-        return 'Computer wins! ' + computerScore + " " +"to" + " " + humanScore ;
+        return 'End of game! Computer wins! ' + computerScore + " " +"to" + " " + humanScore ;
     }
     else {
-        return "Player and Computer ties: " + humanScore + " " + "to" + " "  + computerScore;
+        return "End of game! Player and Computer ties: " + humanScore + " " + "to" + " "  + computerScore;
     }
 }
 
